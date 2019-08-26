@@ -1,0 +1,90 @@
+[2019-07-08 14:28:03,299] ERROR {org.ballerinalang.bre.bvm.BVMScheduler} - null 
+java.lang.NullPointerException
+	at org.ballerinalang.bre.bvm.BVM.invokeVirtualFunction(BVM.java:3346)
+	at org.ballerinalang.bre.bvm.BVM.execute(BVM.java:428)
+	at org.ballerinalang.bre.bvm.BVMScheduler.execute(BVMScheduler.java:72)
+	at org.ballerinalang.bre.bvm.BVMExecutor.execute(BVMExecutor.java:184)
+	at org.ballerinalang.bre.bvm.BVMExecutor.invokePackageStopFunctions(BVMExecutor.java:293)
+	at org.ballerinalang.bre.bvm.BVMExecutor.stopProgramFile(BVMExecutor.java:71)
+	at org.ballerinalang.BLangProgramRunner.runMainFunc(BLangProgramRunner.java:83)
+	at org.ballerinalang.launcher.LauncherUtils.runMain(LauncherUtils.java:114)
+	at org.ballerinalang.launcher.LauncherUtils.runBal(LauncherUtils.java:413)
+	at org.ballerinalang.launcher.LauncherUtils.runProgram(LauncherUtils.java:106)
+	at org.ballerinalang.launcher.Main$RunCmd.execute(Main.java:267)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.ballerinalang.launcher.Main.main(Main.java:63)
+ 
+[2019-07-08 14:28:03,307] ERROR {org.ballerinalang.launcher.Main} - java.lang.NullPointerException 
+java.lang.RuntimeException: java.lang.NullPointerException
+	at org.ballerinalang.bre.bvm.BVMScheduler.execute(BVMScheduler.java:77)
+	at org.ballerinalang.bre.bvm.BVMExecutor.execute(BVMExecutor.java:184)
+	at org.ballerinalang.bre.bvm.BVMExecutor.invokePackageStopFunctions(BVMExecutor.java:293)
+	at org.ballerinalang.bre.bvm.BVMExecutor.stopProgramFile(BVMExecutor.java:71)
+	at org.ballerinalang.BLangProgramRunner.runMainFunc(BLangProgramRunner.java:83)
+	at org.ballerinalang.launcher.LauncherUtils.runMain(LauncherUtils.java:114)
+	at org.ballerinalang.launcher.LauncherUtils.runBal(LauncherUtils.java:413)
+	at org.ballerinalang.launcher.LauncherUtils.runProgram(LauncherUtils.java:106)
+	at org.ballerinalang.launcher.Main$RunCmd.execute(Main.java:267)
+	at java.util.Optional.ifPresent(Optional.java:159)
+	at org.ballerinalang.launcher.Main.main(Main.java:63)
+Caused by: java.lang.NullPointerException
+	at org.ballerinalang.bre.bvm.BVM.invokeVirtualFunction(BVM.java:3346)
+	at org.ballerinalang.bre.bvm.BVM.execute(BVM.java:428)
+	at org.ballerinalang.bre.bvm.BVMScheduler.execute(BVMScheduler.java:72)
+	... 10 more
+ 
+[2019-07-08 17:30:53,445] ERROR {org.ballerinalang.net.http.HttpConnectorPortBindingListener} - Error in http endpoint 
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:563)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1332)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:488)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:473)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:984)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-07-08 17:31:30,788] ERROR {org.ballerinalang.net.http.HttpConnectorPortBindingListener} - Error in http endpoint 
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at io.netty.channel.socket.nio.NioServerSocketChannel.doBind(NioServerSocketChannel.java:130)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.bind(AbstractChannel.java:563)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.bind(DefaultChannelPipeline.java:1332)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeBind(AbstractChannelHandlerContext.java:488)
+	at io.netty.channel.AbstractChannelHandlerContext.bind(AbstractChannelHandlerContext.java:473)
+	at io.netty.channel.DefaultChannelPipeline.bind(DefaultChannelPipeline.java:984)
+	at io.netty.channel.AbstractChannel.bind(AbstractChannel.java:259)
+	at io.netty.bootstrap.AbstractBootstrap$2.run(AbstractBootstrap.java:366)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:495)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:905)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+ 
+[2019-07-23 10:49:55,769] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 10:50:12,365] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 10:51:40,606] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 11:52:43,874] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 12:22:45,611] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 12:23:26,302] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 12:29:21,645] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 12:37:02,572] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 12:39:12,766] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 13:22:31,291] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 14:11:58,116] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 14:55:26,031] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
+[2019-07-23 15:51:36,326] ERROR {org.ballerinalang.net.http.BallerinaHTTPConnectorListener} - Error in HTTP server connector: Remote client closed the connection before initiating inbound request  
