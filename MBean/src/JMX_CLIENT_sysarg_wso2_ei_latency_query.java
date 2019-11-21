@@ -8,12 +8,12 @@ import javax.management.remote.JMXServiceURL;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class JMX_CLIENT_sysarg_wso2_ei {
+public class JMX_CLIENT_sysarg_wso2_ei_latency_query {
 
 
 //    public static final String HOST = "192.168.32.9";
     public static final String HOST = "127.0.0.1";
-    public static final String PORT = "3346";
+    public static final String PORT = "9999";
 
     public static void main(String[] args) throws IOException, MalformedObjectNameException {
         Scanner input = new Scanner(System.in);
@@ -26,22 +26,17 @@ public class JMX_CLIENT_sysarg_wso2_ei {
         MBeanServerConnection mbeanServerConnection = jmxConnector.getMBeanServerConnection();
         //ObjectName should be same as your MBean name
         //ObjectName mbeanName = new ObjectName("com.journaldev.jmx:type=SystemConfig");
-        ObjectName mbeanName = new ObjectName("com.ei.autotuning-Axis2SynapseController:type=basic,name=dynamicTuning");
+        ObjectName mbeanName = new ObjectName("org.apache.synapse:type=PassthroughLatencyView,name=nio-https-https");
 
         //Get MBean proxy instance that will be used to make calls to registered MBean
-        Axis2SynapseEnvironmentMBean mbeanProxy =
-                (Axis2SynapseEnvironmentMBean) MBeanServerInvocationHandler.newProxyInstance(
-                        mbeanServerConnection, mbeanName, Axis2SynapseEnvironmentMBean.class, true);
+        LatencyViewMBean mbeanProxy =
+                (LatencyViewMBean) MBeanServerInvocationHandler.newProxyInstance(
+                        mbeanServerConnection, mbeanName, LatencyViewMBean.class, true);
 
 
-            if( args[0].equals("set")){
-//                mbeanProxy.setMaxThreadPoolSize(Integer.parseInt(arr[1]));
-                mbeanProxy.setCoreThreadPoolSize(Integer.parseInt(args[1]));
-                mbeanProxy.setMaxThreadPoolSize(Integer.parseInt(args[1]));
-                System.out.println("Core Pool Size = " + mbeanProxy.getCoreThreadPoolSize());
-                System.out.println("Max Pool Size = "+mbeanProxy.getMaxThreadPoolSize());
-                System.out.println("Keep Alive Time = "+mbeanProxy.getKeepAliveTime());
-            }
+                System.out.println("99% Latency = " + mbeanProxy.get1m_99Per_Latency());
+
+
 
         //close the connection
         jmxConnector.close();
