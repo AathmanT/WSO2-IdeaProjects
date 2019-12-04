@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: JMX_CLIENT_sysarg_wso2_ei_latency_query
+

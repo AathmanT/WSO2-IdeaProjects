@@ -12,6 +12,7 @@ public class JMX_CLIENT_sysarg {
 
 
     public static final String HOST = "192.168.32.4";
+//    public static final String HOST = "127.0.0.1";
     public static final String PORT = "1234";
 
     public static void main(String[] args) throws IOException, MalformedObjectNameException {

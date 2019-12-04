@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MBeanWso2EIpassthrough:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MBeanWso2EIpassthrough_jar</output-path>
+    <root id="archive" name="MBeanWso2EIpassthrough.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/../MBeanWso2EIpassthrough/src/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="MBean" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/libs/gson-2.8.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

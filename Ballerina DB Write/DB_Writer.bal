@@ -9,7 +9,12 @@ mysql:Client testDB = new({
         password: "root",
         dbOptions: { useSSL: false }
     });
-
+jdbc:Client testDB = new({
+    url: "jdbc:mysql://localhost:3306/testdb",
+    username: "root",
+    password: "root",
+    dbOptions: { useSSL: false }
+});
 public function main() {
     //io:println("The update operation - Creating a table:");
     //var ret = testDB->update("CREATE TABLE student(id INT AUTO_INCREMENT,

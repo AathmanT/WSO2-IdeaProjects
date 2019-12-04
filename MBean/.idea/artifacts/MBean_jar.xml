@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="MBean:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/MBean_jar</output-path>
-    <root id="archive" name="MBean.jar">
-      <element id="module-output" name="MBean" />
-    </root>
-  </artifact>
-</component>

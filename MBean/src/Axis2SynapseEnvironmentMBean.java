@@ -1,5 +1,3 @@
-package org.apache.synapse.core.axis2;
-
 public interface Axis2SynapseEnvironmentMBean {
 
     public void setCoreThreadPoolSize(int size);

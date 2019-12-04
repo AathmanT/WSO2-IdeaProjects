@@ -17,8 +17,6 @@
 *  under the License.
 */
 
-package org.apache.synapse.transport.passthru.jmx;
-
 import java.util.Date;
 
 /**
